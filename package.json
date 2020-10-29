@@ -3,6 +3,7 @@
     "displayName": "Ethereum Gas Price",
     "description": "Get current Ethereum gas price in the VS Code status bar",
     "version": "1.0.0",
+    "publisher": "alexeevsergey",
     "homepage": "https://github.com/monosux/vscode-ethereum-gas-price",
 	"repository": {
 		"type": "git",
