@@ -1,0 +1,66 @@
+{
+    "name": "ethereum-gas-price",
+    "displayName": "Ethereum Gas Price",
+    "description": "Get current Ethereum gas price in the VS Code status bar",
+    "version": "1.0.0",
+    "homepage": "https://github.com/monosux/vscode-ethereum-gas-price",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/monosux/vscode-ethereum-gas-price.git"
+	},
+	"bugs": {
+		"url": "https://github.com/monosux/vscode-ethereum-gas-price/issues"
+	},
+	"author": "Sergey Alexeev <alexeev.sergey.a@gmail.com>",
+	"license": "MIT",
+    "engines": {
+        "vscode": "^1.50.0"
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "*"
+    ],
+    "main": "./extension.js",
+    "icon": "assets/icon.png",
+    "contributes": {
+        "configuration": {
+            "properties": {
+                "ethereum-gas-price.key": {
+                    "type": "string",
+                    "default": "",
+                    "markdownDescription": "Enter the Etherscan API key. If you do not have one get your free API key here: [etherscan.io](https://etherscan.io/myapikey)"
+                },
+                "ethereum-gas-price.refreshInterval": {
+                    "type": "number",
+                    "minimum": 1,
+                    "default": 15,
+                    "description": "Refresh interval in minutes"
+                },
+                "ethereum-gas-price.showIcons": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Show icons near the gas price"
+                }
+            }
+        }
+    },
+    "scripts": {
+        "lint": "eslint ."
+    },
+    "devDependencies": {
+        "@types/glob": "^7.1.3",
+        "@types/mocha": "^8.0.0",
+        "@types/node": "^12.11.7",
+        "@types/vscode": "^1.50.0",
+        "eslint": "^7.9.0",
+        "glob": "^7.1.6",
+        "mocha": "^8.1.3",
+        "typescript": "^4.0.2",
+        "vscode-test": "^1.4.0"
+    },
+    "dependencies": {
+        "node-fetch": "^2.6.1"
+    }
+}
