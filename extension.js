@@ -9,8 +9,8 @@ const settings = {
         low: '🌤',
         normal: '🌧',
         high: '🌩',
-        loading: '🧑‍🚀',
-        error: '🧟'
+        loading: '🚀',
+        error: '🚧'
     },
     messages: {
         loading: 'Updating gas prices...',
