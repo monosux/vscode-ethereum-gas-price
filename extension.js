@@ -44,7 +44,7 @@ const update = async () => {
         if (data.status != 1) throw 'API error';
         renderResult(data);
     } catch (e) {
-        renderBar(settings.messages.error, settings.icons.error);
+        renderBar(`${settings.messages.error}${e?.message ? `: ${e.message}` : ''}`, settings.icons.error);
     }
 };
 
