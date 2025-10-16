@@ -1,5 +1,4 @@
 const vscode = require('vscode');
-const fetch = require('node-fetch');
 
 const settings = {
     bar: {},
@@ -40,10 +39,11 @@ const update = async () => {
     renderBar(settings.messages.loading, settings.icons.loading);
     try {
         const response = await fetch(`${settings.url}${settings.config.key}`);
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
         const data = await response.json();
         if (data.status != 1) throw 'API error';
         renderResult(data);
-    } catch(e) {
+    } catch (e) {
         renderBar(settings.messages.error, settings.icons.error);
     }
 };
