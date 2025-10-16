@@ -4,7 +4,7 @@ const fetch = require('node-fetch');
 const settings = {
     bar: {},
     config: {},
-    url: 'https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=',
+    url: 'https://api.etherscan.io/v2/api?chainid=1&module=gastracker&action=gasoracle&apikey=',
     icons: {
         low: '🌤',
         normal: '🌧',
